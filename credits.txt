@@ -1,7 +1,7 @@
 Credits:
-Jquery
+JQuery
 Bootstrap
-Font-awesome
-Google Maps
-Images : Pexels, Pixabay, Unsplash
-Goolgle fonts : Lato & Montserrat
+Font-Awesome
+Images: Pexels, Pixabay, Unsplash
+Google Fonts: Lato & Montserrat
+Design Inspiration: github.com/Neurocomputation-Lab-NCAI-NEDUET/stem
