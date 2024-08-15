@@ -14,3 +14,7 @@
     - Tooltips to explain modality
 
 - Offer Dark Mode
+
+COURSES:
+- Cooking
+- Science experiments

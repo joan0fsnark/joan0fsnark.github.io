@@ -446,12 +446,35 @@ textarea:focus {
 .home-wrapper {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 0;
   right: 0;
+  text-align: center; /* Center the text */
 }
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%; /* Ensure it takes full width */
+}
+
+.row {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%; /* Adjust row width */
+}
+
+.col-md-8 {
+    width: 100%; /* Make the column full-width */
+    max-width: 80%; /* Adjust max width to avoid too wide text */
+    margin: 0 auto; /* Center the column */
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: left; /* Text aligned to left */
+}
+
 
 /* -- Breadcrumb -- */
 .hero-area-tree li {
