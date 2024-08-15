@@ -25,6 +25,7 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  <script src="./js/obfuscate.js" defer></script>
 </head>
 
 <body>
@@ -64,7 +65,8 @@
   <!-- Home -->
   <div id="home" class="hero-area">
     <!-- Background Image -->
-    <div class="bg-image bg-parallax overlay" style="background-image: url('./img/heart-binary.jpg')" aria-hidden="true">
+    <div class="bg-image bg-parallax overlay" style="background-image: url('./img/heart-binary.jpg')"
+      aria-hidden="true">
     </div>
     <!-- /Background Image -->
 
@@ -150,8 +152,8 @@
       <div class="row">
         <div class="section-header text-center">
           <h2>Explore Our Courses</h2>
-          <p class="lead">In the following technologies, students learn the 21st-century skills they need to succeed.
-          </p>
+          <p class="lead">What sparks your curiosity today? Dive into these cutting-edge technologies and discover new
+            skills and possibilities!</p>
         </div>
       </div>
 
@@ -164,7 +166,7 @@
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="course">
               <div class="course-img">
-                <img src="./img/scratch.png" alt="Screenshot of Scratch block code" />
+                <img src="./img/scratch.png" alt="Screenshot of the Scratch platform interface" />
               </div>
               <div class="course-details">
                 <span class="course-category">Block Coding in Scratch</span>
@@ -179,7 +181,7 @@
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="course">
               <div class="course-img">
-                <img src="./img/python.webp" alt="Screenshot of Python code" />
+                <img src="./img/python.webp" alt="Colorful, stylized Python logo" />
               </div>
               <div class="course-details">
                 <span class="course-category">Python 101</span>
@@ -194,10 +196,10 @@
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="course">
               <div class="course-img">
-                <img src="./img/webdev.png" alt="Screenshot of HTML and CSS code" />
+                <img src="./img/web-icon.jpg" alt="Screenshot of HTML and CSS code" />
               </div>
               <div class="course-details">
-                <span class="course-category">Web Development</span>
+                <span class="course-category">Introduction to Web Development</span>
               </div>
               <p>Learn how to build and style websites from scratch using HTML, CSS, and basic JavaScript, focusing on
                 practical skills and real-world applications.</p>
@@ -215,7 +217,7 @@
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="course">
               <div class="course-img">
-                <img src="./img/roblox.png" alt="Screenshot of Roblox game design interface" />
+                <img src="./img/roblox-studio.jpg" alt="Screenshot of Roblox game design interface" />
               </div>
               <div class="course-details">
                 <span class="course-category">Roblox Game Design</span>
@@ -226,17 +228,17 @@
           </div>
           <!-- /ROBLOX GAME DESIGN -->
 
-          <!-- VR GAME DESIGN -->
+          <!-- VR CREATION -->
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="course">
               <div class="course-img">
-                <img src="./img/vr.png" alt="Screenshot of VR game design interface" />
+                <img src="./img/vr-cospaces.jpg" alt="Screenshot of CoSpaces interface" />
               </div>
               <div class="course-details">
-                <span class="course-category">VR Game Design</span>
+                <span class="course-category">VR Adventures: Game and World Design</span>
               </div>
-              <p>Create immersive VR experiences and games using VR platforms and tools. This course introduces concepts
-                of 3D modeling, interaction design, and VR-specific programming.</p>
+              <p>Create immersive VR experiences and games using CoSpaces. This course introduces concepts
+                of 3D modeling, animation, interactive design, and VR-specific programming.</p>
             </div>
           </div>
           <!-- /VR GAME DESIGN -->
@@ -245,7 +247,7 @@
           <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="course">
               <div class="course-img">
-                <img src="./img/raspberrypi.png" alt="Photo of Raspberry Pi setup" />
+                <img src="./img/rpi.jpg" alt="Photo of Raspberry Pi setup" />
               </div>
               <div class="course-details">
                 <span class="course-category">Raspberry Pi Projects</span>
@@ -277,9 +279,9 @@
         <div class="col-md-6">
           <div class="contact-info">
             <h4>Contact Information</h4>
-            <p><i class="fa fa-map-marker"></i> 1234 Elm Street, Sacramento, CA 95814</p>
-            <p><i class="fa fa-phone"></i> (555) 123-4567</p>
-            <p><i class="fa fa-envelope"></i> <a href="mailto:info@pixelwhisk.com">info@pixelwhisk.com</a></p>
+            <p><i class="fa fa-map-marker"></i> Alkali Flat, Sacramento, CA 95814</p>
+            <p><i class="fa fa-phone"></i> <span id="phone"></span></p>
+            <p><i class="fa fa-envelope"></i> <a id="email" href="#">Contact Us</a></p>
             <p><i class="fa fa-globe"></i> <a href="https://www.pixelwhisk.com" target="_blank"
                 rel="noreferrer noopener">www.pixelwhisk.com</a></p>
           </div>
