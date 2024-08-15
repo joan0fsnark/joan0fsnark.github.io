@@ -31,7 +31,7 @@ Table OF Contents
 /*------------------------------------*\
     General
 \*------------------------------------*/
-/* --- typography --- */
+/* --- Typography --- */
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
@@ -501,8 +501,13 @@ textarea:focus {
 \*------------------------------------*/
 /* -- Feature -- */
 
+/* Adjust row spacing */
+.row {
+  margin: 0; /* Reset any default margins */
+}
+
 .feature {
-  position: relative;
+  margin-bottom: 30px; /* Add space below the feature section */
 }
 
 .feature + .feature {
@@ -535,15 +540,22 @@ textarea:focus {
   float: left;
 }
 
-/* -- About Img -- */
-.about-img {
-  margin-top: 35px;
+/* Ensure correct column width */
+.col-md-8, .col-md-4 {
+  padding: 15px; /* Adjust padding as needed */
 }
 
-.about-img > img {
-  width: 100%;
-  float: center;
-}
+/* -- About Img -- */
+.about-img {
+  display: flex; /* Use flexbox for better alignment */
+  justify-content: center; /* Center the image horizontally */}
+
+  .about-img img {
+    max-width: 100%; /* Ensure image scales responsively */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: add border radius for rounded corners */
+  }
+  
 
 /* -- About Video -- */
 .about-video {
@@ -582,6 +594,19 @@ textarea:focus {
   color: #c92f1a;
 }
 
+/* Optional: Adjust for responsiveness */
+@media (max-width: 768px) {
+  .col-md-8, .col-md-4 {
+    width: 100%; /* Stack columns on smaller screens */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .about-img {
+    margin-top: 20px; /* Add space above the image */
+    text-align: center; /* Center-align image on small screens */
+  }
+}
+
 @-webkit-keyframes play-animation {
   from {
     -webkit-box-shadow: 0px 0px 0px 0px #fff;
@@ -615,9 +640,7 @@ textarea:focus {
   opacity: 0.7;
 }
 
-/*------------------------------------*\
-    Courses
-\*------------------------------------*/
+
 /*------------------------------------*\
     Courses
 \*------------------------------------*/
