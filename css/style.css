@@ -78,7 +78,7 @@ a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
-  color: #374050;
+  color: #3c28f2;
   opacity: 0.9;
 }
 
@@ -283,7 +283,7 @@ textarea:focus {
 
 #header.transparent-nav {
   position: absolute;
-  background-color: #000000;
+  background-color: #021834;
 }
 
 #header.transparent-nav .main-menu li a {
