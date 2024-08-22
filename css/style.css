@@ -1289,8 +1289,65 @@ textarea:focus {
     margin-top: 20px;
   }
 
-  /*-- Contact page --*/
-  .contact-form {
+  /*-- Contact form --*/
+      /* Contact Section Styling */
+      #contact {
+        background-color: #f9f9f9;
+        padding: 60px 0;
+      }
+      .contact-form {
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+      .contact-form h4 {
+        margin-bottom: 30px;
+        font-size: 24px;
+        color: #333;
+      }
+      .contact-form .input {
+        margin-bottom: 15px;
+        padding: 15px;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+      }
+      .contact-form .main-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 15px 25px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .contact-form .main-button:hover {
+        background-color: #0056b3;
+      }
+      .contact-aside {
+        padding: 30px;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+      .contact-aside h4 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+      }
+      .contact-detail li {
+        margin-bottom: 10px;
+        font-size: 16px;
+      }
+      .contact-detail i {
+        color: #007bff;
+      }
+      .contact-map img {
+        border-radius: 8px;
+        max-width: 100%;
+      }
+
+  /* .contact-form {
     margin-bottom: 40px;
   }
 
@@ -1299,10 +1356,10 @@ textarea:focus {
   }
 
   /*-- Blog page --*/
-  #main {
+  /* #main {
     margin-bottom: 80px;
   }
-}
+} */
 
 @media only screen and (max-width: 767px) {
   /*-- Hero area --*/
