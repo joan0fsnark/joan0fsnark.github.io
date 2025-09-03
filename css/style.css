@@ -1,72 +1,48 @@
 /*
 Template Name: HTML Education Template
 Author: yaminncco
-
-Colors:
-    Body        : #798696
-    Headers     : #374050
-    Primary     : #FF6700
-    Grey        : #EBEBEB
-
-Fonts: Lato & Montserrat
 */
 
 /*------------------------------------*\
     General
 \*------------------------------------*/
-/* --- typography --- */
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  color: #798696;
   overflow-x: hidden;
+  /* GRADIENT THEME: Full page gradient background */
+  background: linear-gradient(to bottom, #05C9F9, #10B4DE, #1B9FC3, #268BA8, #30768D, #3B6172, #464C57);
+  background-attachment: fixed;
+  color: #cdf4fe; /* GRADIENT THEME: Light text color */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin-top: 12px;
   margin-bottom: 15px;
   font-weight: 600;
-  color: #374050;
+  color: #fff; /* GRADIENT THEME: White headings */
 }
 
-h1 {
-  font-size: 38px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-h4 {
-  font-size: 18px;
-}
+h1 { font-size: 38px; }
+h2 { font-size: 30px; }
+h3 { font-size: 24px; }
+h4 { font-size: 18px; }
 
 a {
   font-family: "Lato", sans-serif;
-  color: #374050;
   font-weight: 700;
+  color: #fff; /* GRADIENT THEME: White links */
 }
 
-a:hover,
-a:focus {
+a:hover, a:focus {
   text-decoration: none;
   outline: none;
-  color: #374050;
+  color: #9be9fd; /* GRADIENT THEME: Lighter blue for link hover */
   opacity: 0.9;
 }
 
-ul,
-ol {
+ul, ol {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -76,40 +52,12 @@ ol {
   color: #fff;
 }
 
-blockquote {
-  position: relative;
-  margin: 20px 0;
-  padding: 20px 20px 20px 60px;
-  border-left: none;
-  color: #374050;
-}
-
-blockquote:before {
-  content: "\f10d";
-  font-family: fontAwesome;
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #c92f1a;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  border-radius: 50%;
-  border: 1px solid #ebebeb;
-}
-
 /* --- Section --- */
 .section {
   position: relative;
   padding-top: 80px;
   padding-bottom: 80px;
-}
-
-.section-hr {
-  margin-top: 80px;
-  margin-bottom: 80px;
-  border-color: #ebebeb;
+  background-color: transparent; /* GRADIENT THEME: Sections are see-through */
 }
 
 .section-header {
@@ -126,11 +74,7 @@ blockquote:before {
   background-position: center;
   background-size: cover;
 }
-
-.bg-image.bg-parallax {
-  background-attachment: fixed;
-}
-
+.bg-image.bg-parallax { background-attachment: fixed; }
 .bg-image.overlay:after {
   content: "";
   position: absolute;
@@ -146,18 +90,20 @@ blockquote:before {
 .main-button {
   display: inline-block;
   padding: 10px 30px;
-  background-color: #c92f1a;
   border: 2px solid transparent;
   border-radius: 40px;
-  color: #fff;
   transition: 0.2s all;
+  /* GRADIENT THEME: Button colors */
+  background-color: #05C9F9;
+  color: #012832;
+  font-weight: bold;
 }
 
 .main-button:hover,
 .main-button:focus {
   background-color: #fff;
-  border: 2px solid #c92f1a;
-  color: #c92f1a;
+  border-color: #fff;
+  color: #05C9F9;
 }
 
 .main-button.icon-button:after {
@@ -170,61 +116,71 @@ blockquote:before {
   opacity: 0;
   transition: 0.2s all;
 }
-
-.main-button.icon-button:hover:after {
-  opacity: 1;
-}
+.main-button.icon-button:hover:after { opacity: 1; }
 
 /* --  Input  -- */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-input[type="date"],
-input[type="url"],
-input[type="tel"],
-textarea {
+.contact-form label { color: #fff; }
+input, textarea { color: #fff; }
+input[type="text"], input[type="email"], input[type="password"],
+input[type="number"], input[type="date"], input[type="url"],
+input[type="tel"], textarea {
   height: 40px;
   width: 100%;
-  border: 1px solid #ebebeb;
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 4px;
   background: transparent;
   padding-left: 15px;
   padding-right: 15px;
   transition: 0.2s border-color;
 }
+textarea { padding: 10px 15px; }
+input:focus, textarea:focus { border-color: #05C9F9; }
 
-textarea {
-  padding: 10px 15px;
+/*------------------------------------*\
+    Header & Navigation
+\*------------------------------------*/
+#header {
+  position: relative;
+  border-bottom: 1px solid rgba(155, 233, 253, 0.2);
+  background-color: rgba(38, 139, 168, 0.9); /* Blue (Munsell) from palette */
+  z-index: 100;
 }
 
-input[type="text"]:focus,
-input[type="contact-email"]:focus,
-input[type="email"]:focus,
-input[type="password"]:focus,
-input[type="number"]:focus,
-input[type="date"]:focus,
-input[type="url"]:focus,
-input[type="tel"]:focus,
-textarea:focus {
-  border-color: #c92f1a;
+.navbar-brand {
+    padding: 10px 0;
+}
+.navbar-brand img {
+  max-height: 40px;
+  width: auto;
+}
+
+/* -- Desktop Nav -- */
+.main-menu li a {
+    padding: 20px 15px;
+}
+.main-menu li a:after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #05C9F9;
+  width: 100%;
+  transform: translateY(5px);
+  opacity: 0;
+  transition: 0.2s all;
+}
+.main-menu li a:hover:after,
+.main-menu li a:focus:after {
+  transform: translateY(0px);
+  opacity: 1;
 }
 
 /*------------------------------------*\
     Hero Area
 \*------------------------------------*/
-.hero-area {
-  position: relative;
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
 #home.hero-area {
-  height: calc(100vh - 80px);
-  padding-top: 0;
-  padding-bottom: 0;
+  height: 100vh;
+  padding: 0;
 }
-
 .home-wrapper {
   position: absolute;
   top: 50%;
@@ -233,119 +189,67 @@ textarea:focus {
   right: 0;
 }
 
-/* -- Breadcrumb -- */
-.hero-area-tree li {
-  display: inline-block;
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.hero-area-tree li > a {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.hero-area-tree li + li:before {
-  content: "/";
-  margin: 0 5px;
-  color: rgba(235, 235, 235, 0.25);
-}
-
 /*------------------------------------*\
     About & Courses
 \*------------------------------------*/
-
-/* This class handles the bio picture's wrapping behavior */
+#about {
+  padding-top: 40px;
+}
 .feature-img {
   width: 200px;
   float: left;
   margin: 5px 25px 10px 0;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  max-width: 100%;
-  height: auto;
 }
-
-/* Final positioning for the sidebar collage image */
 .about-img img {
-  width: 113%;
+  width: 103%;
   height: auto;
   position: relative;
   top: 20px;
   float: right;
-  right: -70px; /* <-- padding between collage and bio */
-
+  right: -35px;
 }
-/* Remove padding from the sidebar image's column */
-#about-image-col {
-  padding-right: 0;
-}
-
-/* Reduce top spacing on the About section */
-#about {
-  padding-top: 40px; /* Default is 80px, adjust as needed */
-}
-
-/* This resets the positioning on mobile when the columns stack */
-@media (max-width: 991px) {
-  .about-img img {
-    top: 0;
-    float: none;
-    margin: 20px auto;
-  }
-}
-
 .course {
   margin-top: 20px;
   margin-bottom: 20px;
+  background-color: rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 4px;
 }
-
 .course .course-img {
   position: relative;
   margin-bottom: 10px;
   border-radius: 4px;
   overflow: hidden;
 }
-
 .course .course-img > img {
-  width: 350px;
-  height: 200px;
+  width: 100%;
+  height: auto;
 }
-
 .course .course-title {
   display: block;
-  height: 62px;
-  margin-top: 10px;
+  height: auto;
+  margin: 10px 0;
 }
-
 .course .course-details {
   margin-top: 5px;
   padding-top: 5px;
-  border-bottom: 1px solid #ebebeb;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: #cdf4fe;
 }
-
-.course .course-details .course-price.course-free {
-  color: green;
-}
-
-.course .course-details .course-price.course-premium {
-  color: #c92f1a;
-}
-
-#courses .center-btn {
-  text-align: center;
-  margin-top: 40px;
+.course-body .course-details span i {
+  color: #05C9F9;
+  margin-right: 5px;
 }
 
 /*------------------------------------*\
     Footer
 \*------------------------------------*/
-#bottom-footer {
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 1px solid #ebebeb;
+#footer {
+  background-color: rgba(70, 76, 87, 0.5);
 }
+#footer p { color: #cdf4fe; }
 
 /*------------------------------------*\
     Preloader
@@ -357,36 +261,107 @@ textarea:focus {
   top: 0;
   bottom: 0;
   background-color: #fff;
-  z-index: 9999;
+  z-index: 99999;
 }
-
-#preloader .preloader {
+#preloader .preloader:after {
+  content: "";
+  display: block;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-
-#preloader .preloader:after {
-  content: "";
-  display: block;
   width: 40px;
   height: 40px;
-  border: 1px solid #ebebeb;
-  border-top: 1px solid #c92f1a;
+  border: 2px solid #ebebeb;
+  border-top: 2px solid #05C9F9;
   border-radius: 50%;
   animation: 1s preloader linear infinite;
 }
-
 @keyframes preloader {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 /*------------------------------------*\
-    Logo Styling
+    MOBILE RESPONSIVE STYLES
 \*------------------------------------*/
-.navbar-brand img {
-  max-height: 40px;
-  width: auto;
+@media (max-width: 767px) {
+  /* Center the logo on mobile screens */
+  .navbar-header {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    height: 60px;
+  }
+  .navbar-brand {
+    float: none;
+    display: inline-block;
+    margin: 0;
+    height: 100%;
+    padding: 10px 0;
+  }
+
+  /* Mobile slide-out menu panel */
+  #nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0%;
+    max-width: 250px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+    padding-top: 80px;
+    padding-bottom: 40px;
+    transform: translateX(100%);
+    transition: 0.4s all cubic-bezier(0.77, 0, 0.18, 1);
+    z-index: 999;
+  }
+  #header.nav-collapse #nav {
+    width: 100%;
+    transform: translateX(0%);
+  }
+  .main-menu li a {
+    color: #374050 !important; /* Dark color for links on white mobile menu */
+  }
+
+  /* Mobile Toggle Btn */
+  .navbar-toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    padding: 0;
+    height: 40px;
+    width: 40px;
+    z-index: 9999;
+    border: none;
+    background: transparent;
+  }
+  .navbar-toggle > span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s background;
+  }
+  .navbar-toggle > span:before,
+  .navbar-toggle > span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: 0.2s transform;
+  }
+  .navbar-toggle > span,
+  .navbar-toggle > span:before,
+  .navbar-toggle > span:after {
+    height: 2px;
+    width: 25px;
+    background-color: #fff;
+  }
+  .navbar-toggle > span:before { top: -8px; }
+  .navbar-toggle > span:after { top: 8px; }
+  #header.nav-collapse .navbar-toggle > span { background: transparent; }
+  #header.nav-collapse .navbar-toggle > span:before { transform: translateY(8px) rotate(45deg); }
+  #header.nav-collapse .navbar-toggle > span:after { transform: translateY(-8px) rotate(-45deg); }
 }
