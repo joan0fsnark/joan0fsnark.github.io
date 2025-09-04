@@ -1,37 +1,25 @@
-// ** PHONE ** //
+// This script runs after the page is loaded to protect contact info from bots.
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('JavaScript loaded'); // Check if this appears in the console
 
-    // Define the phone number in parts
-    var phoneParts = {
-        countryCode: "+1",
-        areaCode: "916",
-        number: "245-0527"
-    };
+  // Paste your Base64 encoded strings here.
+  const encodedEmail = "aGVsbG9AcGl4ZWx3aGlzay5jb20="; // Replace with your encoded email
+  const encodedPhone = "NTEwLTkwOC0wNjMx";       // Replace with your encoded phone number
 
-    // Function to reconstruct the phone number
-    function getPhoneNumber() {
-        return phoneParts.countryCode + ' ' + phoneParts.areaCode + '-' + phoneParts.number;
-    }
+  // Find the email element on the page.
+  const emailElement = document.getElementById('email');
+  if (emailElement) {
+    // Decode the email address.
+    const decodedEmail = atob(encodedEmail);
+    // Set the link to "mailto:" and the visible text.
+    emailElement.href = 'mailto:' + decodedEmail;
+    emailElement.textContent = "Contact Us"; // You can change this text if you like
+  }
 
-    // Display the phone number
-    document.getElementById('phone').textContent = getPhoneNumber();
+  // Find the phone number element on the page.
+  const phoneElement = document.getElementById('phone');
+  if (phoneElement) {
+    // Decode the phone number and set the visible text.
+    phoneElement.textContent = atob(encodedPhone);
+  }
 
-
-// ** EMAIL ** //
-// Define email address parts
-var emailParts = {
-    username: "info",
-    domain: "pixelwhisk.com"
-};
-
-// Function to reconstruct the email address
-function getEmailAddress() {
-    return emailParts.username + '@' + emailParts.domain;
-}
-
-// Set the email address
-var emailElement = document.getElementById('email');
-emailElement.href = 'mailto:' + getEmailAddress();
-emailElement.textContent = getEmailAddress();
 });
