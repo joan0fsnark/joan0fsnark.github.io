@@ -1,7 +1,0 @@
-Credits:
-JQuery
-Bootstrap
-Font-Awesome
-Images: Pexels, Pixabay, Unsplash
-Google Fonts: Lato & Montserrat
-Design Inspiration: github.com/Neurocomputation-Lab-NCAI-NEDUET/stem
