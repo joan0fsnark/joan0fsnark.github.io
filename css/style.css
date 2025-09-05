@@ -213,8 +213,7 @@ input:focus, textarea:focus { border-color: #05C9F9; }
 
 /* --- Course Card Base Styles --- */
 .course {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* Add spacing below cards */
   background-color: rgba(0,0,0,0.1);
   padding: 20px;
   border-radius: 4px;
@@ -245,27 +244,26 @@ input:focus, textarea:focus { border-color: #05C9F9; }
   margin-right: 5px;
 }
 
-/* --- CORRECTED Course Card Alignment --- */
-#courses-wrapper .row {
+/* --- FINAL Course Card Alignment --- */
+#courses-wrapper.row {
   display: flex;
   flex-wrap: wrap;
 }
 #courses-wrapper [class*="col-"] {
   display: flex;
-  flex-direction: column;
 }
 #courses-wrapper .course {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  flex-grow: 1; /* This makes the card grow to fill the column */
 }
 #courses-wrapper .course-body {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
 }
 #courses-wrapper .course-body p {
-  flex-grow: 1; /* This pushes the details to the bottom */
+  flex-grow: 1;
 }
 
 
@@ -406,4 +404,9 @@ input:focus, textarea:focus { border-color: #05C9F9; }
     display: block;
     margin: 20px auto; /* Center the image and add space */
   }
+}
+/* Fix for Horizontal Footer Menu */
+.footer-menu li {
+  display: inline-block; /* This makes the menu items sit side-by-side */
+  margin-left: 15px;   /* This adds a little space between each item */
 }
