@@ -392,3 +392,22 @@ input:focus, textarea:focus { border-color: #05C9F9; }
   #header.nav-collapse .navbar-toggle > span:before { transform: translateY(8px) rotate(45deg); }
   #header.nav-collapse .navbar-toggle > span:after { transform: translateY(-8px) rotate(-45deg); }
 }
+/*
+Final Responsive Fix for About Section Collage
+*/
+@media (max-width: 767px) {
+  #about .row {
+    display: block; /* Revert to default stacking on mobile */
+  }
+
+  .about-img img {
+    /* Reset all the desktop positioning styles */
+    position: static;
+    float: none;
+    right: auto;
+    top: auto;
+    width: 90%; /* Make the image 90% of the screen width */
+    display: block;
+    margin: 20px auto; /* Center the image and add space */
+  }
+}
