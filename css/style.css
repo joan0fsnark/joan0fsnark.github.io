@@ -384,3 +384,19 @@ Final Responsive Fix for About Section Collage
     margin: 20px auto; /* Center the image and add space */
   }
 }
+
+/* Fix for equal height course cards */
+#courses-wrapper .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px; /* This adds space between the rows */
+}
+
+#courses-wrapper .col-md-4 {
+  display: flex;
+}
+
+#courses-wrapper .course {
+  height: 100%;
+  width: 100%;
+}
