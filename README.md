@@ -50,7 +50,7 @@ This is a static website designed to serve as the main online presence for **Pix
 
 **Clone the repository to your local machine:**
 
-`git clone https://github.com/joan0fsnark/joan0fsnark.github.io.git`
+`git clone [https://github.com/joan0fsnark/joan0fsnark.github.io.git](https://github.com/joan0fsnark/joan0fsnark.github.io.git)`
 
 **Navigate into the project directory:**
 
@@ -61,21 +61,4 @@ This is a static website designed to serve as the main online presence for **Pix
 ---
 
 ## 🙏 Credits
-
-**Design Inspiration:**   
-- HTML Education Template created by yaminncco
-- github.com/Neurocomputation-Lab-NCAI-NEDUET/stem
-
-**Frameworks & Libraries:**
-- Bootstrap
-- jQuery
-
-**Fonts & Icons:**
-- Google Fonts: Lato & Montserrat
-- Font Awesome
-
-**Images:**
-- Pexels
-- Pixabay
-- Unsplash
-
+This website was built using the HTML Education Template created by yaminncco.
