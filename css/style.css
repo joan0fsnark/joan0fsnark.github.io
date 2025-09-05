@@ -410,3 +410,44 @@ input:focus, textarea:focus { border-color: #05C9F9; }
   display: inline-block; /* This makes the menu items sit side-by-side */
   margin-left: 15px;   /* This adds a little space between each item */
 }
+/*------------------------------------*\
+    Adult Offerings Section
+\*------------------------------------*/
+.adult-offerings {
+  background-color: rgba(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 4px;
+  height: 100%;
+}
+
+.adult-offerings h4 {
+  color: #05C9F9; /* Vivid Sky Blue from your palette */
+  margin-top: 0;
+}
+
+.adult-offerings p {
+  margin-bottom: 20px;
+}
+
+.offerings-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.offerings-list li {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.offerings-list li i {
+  color: #05C9F9; /* Use the bright blue for the icons */
+  margin-right: 15px;
+  width: 20px;
+  text-align: center;
+}
+/* Align contact section columns */
+.contact-row {
+  display: flex;
+  flex-wrap: wrap;
+}
