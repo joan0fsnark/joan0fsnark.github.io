@@ -210,6 +210,8 @@ input:focus, textarea:focus { border-color: #05C9F9; }
   float: right;
   right: -35px;
 }
+
+/* --- Course Card Base Styles --- */
 .course {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -242,6 +244,30 @@ input:focus, textarea:focus { border-color: #05C9F9; }
   color: #05C9F9;
   margin-right: 5px;
 }
+
+/* --- CORRECTED Course Card Alignment --- */
+#courses-wrapper .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+#courses-wrapper [class*="col-"] {
+  display: flex;
+  flex-direction: column;
+}
+#courses-wrapper .course {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* This makes the card grow to fill the column */
+}
+#courses-wrapper .course-body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+#courses-wrapper .course-body p {
+  flex-grow: 1; /* This pushes the details to the bottom */
+}
+
 
 /*------------------------------------*\
     Footer
@@ -364,11 +390,8 @@ input:focus, textarea:focus { border-color: #05C9F9; }
   #header.nav-collapse .navbar-toggle > span { background: transparent; }
   #header.nav-collapse .navbar-toggle > span:before { transform: translateY(8px) rotate(45deg); }
   #header.nav-collapse .navbar-toggle > span:after { transform: translateY(-8px) rotate(-45deg); }
-}
-/*
-Final Responsive Fix for About Section Collage
-*/
-@media (max-width: 767px) {
+
+  /* Responsive Fix for About Section Collage */
   #about .row {
     display: block; /* Revert to default stacking on mobile */
   }
@@ -383,20 +406,4 @@ Final Responsive Fix for About Section Collage
     display: block;
     margin: 20px auto; /* Center the image and add space */
   }
-}
-
-/* Fix for equal height course cards */
-#courses-wrapper .row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 30px; /* This adds space between the rows */
-}
-
-#courses-wrapper .col-md-4 {
-  display: flex;
-}
-
-#courses-wrapper .course {
-  height: 100%;
-  width: 100%;
 }
