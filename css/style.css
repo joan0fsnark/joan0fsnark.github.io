@@ -429,6 +429,9 @@ input:focus, textarea:focus { border-color: #05C9F9; }
 
 .adult-offerings p {
   margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 16px;   /* Increases the font size from the default */
+  line-height: 1.4;  /* Adds a bit more space between the lines */
 }
 
 .offerings-list {
