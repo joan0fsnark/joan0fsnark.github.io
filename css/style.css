@@ -12,8 +12,8 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   /* GRADIENT THEME: Full page gradient background */
-  background: linear-gradient(to bottom, #05C9F9, #10B4DE, #1B9FC3, #268BA8, #30768D, #3B6172, #464C57);
-  background-attachment: fixed;
+  background: linear-gradient(to bottom, #05C9F9, #10B4DE, #1B9FC3, #268BA8, #30768D, #3B6172, #464C57) !important;
+  background-attachment: fixed !important;
   color: #cdf4fe; /* GRADIENT THEME: Light text color */
 }
 
@@ -278,6 +278,7 @@ input:focus, textarea:focus { border-color: #05C9F9; }
 /*------------------------------------*\
     Preloader
 \*------------------------------------*/
+/*
 #preloader {
   position: fixed;
   left: 0;
@@ -305,6 +306,7 @@ input:focus, textarea:focus { border-color: #05C9F9; }
   from { transform: translate(-50%, -50%) rotate(0deg); }
   to { transform: translate(-50%, -50%) rotate(360deg); }
 }
+*/
 
 /*------------------------------------*\
     MOBILE RESPONSIVE STYLES
@@ -463,4 +465,101 @@ input:focus, textarea:focus { border-color: #05C9F9; }
 .secondary-button:hover {
   background-color: #fff;
   color: #05C9F9; /* Vivid Sky Blue */
+}
+
+/*------------------------------------*\
+    Culinary Page Styles
+\*------------------------------------*/
+
+#home-culinary {
+  height: 70vh; /* A slightly shorter hero for sub-pages */
+}
+
+/* Culinary Page Hero Text Alignment */
+#home-culinary .home-wrapper {
+  top: 30%; /* This moves the text block higher up the page */
+  background-color: rgba(0,0,0,0.2);
+  padding: 30px 20px;
+}
+
+/* Culinary Offerings Section */
+#services {
+    background-color: rgba(0,0,0,0.5);
+    margin-top: 195px; /* Adds space above the section */
+    height: 90vh;
+    padding: 15px 20px;
+
+}
+
+/* Header */
+#services .section-header {
+}
+#services .section-header h2,
+#services .section-header .lead {
+  color: #fff;
+}
+
+/* Services */
+#services .feature {
+  padding: 30px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin-bottom: 30px;
+  transition: all 0.3s;
+  height: calc(100% - 60px);
+  display: flex;
+  align-items: flex-start;
+}
+
+#services .feature:hover {
+  border-color: #05C9F9;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+  transform: translateY(-5px);
+}
+
+#services .feature .feature-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  background: #05C9F9;
+  color: #FFF;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+#services .feature .feature-content h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+#services .feature .feature-content p {
+  color: #cdf4fe;
+}
+
+#culinary-bio {
+  background-color: transparent;
+}
+
+#culinary-bio .section-header h2 {
+  color: #fff;
+}
+
+#culinary-bio .feature {
+    background-color: rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 4px;
+}
+
+#culinary-bio p {
+  color: #cdf4fe;
+}
+
+#culinary-bio .about-img img {
+  border-radius: 4px;
+  box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
 }
