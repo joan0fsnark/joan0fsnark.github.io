@@ -470,7 +470,12 @@ input:focus, textarea:focus { border-color: #05C9F9; }
 \*------------------------------------*/
 
 #home-culinary {
-  height: 60vh; /* A slightly shorter hero for sub-pages */
+  height: 35vh; /* A slightly shorter hero for sub-pages */
+}
+
+/* Culinary Page Hero Text Alignment */
+#home-culinary .home-wrapper {
+  top: 25%; /* This moves the text block higher up the page */
 }
 
 #services .feature {
