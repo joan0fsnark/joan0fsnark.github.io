@@ -35,7 +35,7 @@ This is a static website designed to serve as the main online presence for **Pix
 
 **JavaScript**
 
-**Bootstrap (v5) for the responsive grid system and components.**
+**Bootstrap (v3.4.1) for the responsive grid system and components.**
 
 **jQuery for DOM manipulation and event handling.**
 
