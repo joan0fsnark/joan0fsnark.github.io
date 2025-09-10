@@ -172,7 +172,7 @@ input:focus, textarea:focus { border-color: #05C9F9; }
 /*------------------------------------*\
     Hero Area
 \*------------------------------------*/
-#home.hero-area {
+#home.hero-area, #home-culinary.hero-area {
   height: 100vh;
   padding: 0;
 }
@@ -660,21 +660,42 @@ input:focus, textarea:focus { border-color: #05C9F9; }
 \*------------------------------------*/
 
 #bread-offerings {
-  padding-top: 40px; /* Reduce top space to bring it closer to services */
+  padding-top: 40px;
+}
+
+/* This new class ONLY targets the row with the bread boxes */
+.bread-box-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.bread-box-row [class*="col-"] {
+  display: flex;
 }
 
 .bread-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
   background-color: rgba(0, 0, 0, 0.25);
   padding: 30px;
   border-radius: 4px;
   border: 1px solid rgba(205, 239, 248, 0.2);
-  height: 100%;
   text-align: center;
 }
 
 .bread-box h3 {
-  color: #05C9F9; /* Vivid Sky Blue from your palette */
+  color: #05C9F9;
   margin-top: 0;
+}
+
+/* This makes the description paragraph grow, pushing the price to the bottom */
+.bread-box p:last-of-type {
+  flex-grow: 1;
+}
+
+#bread-offerings .main-button {
+    margin-top: 40px;
 }
 
 .bread-notice {
@@ -688,10 +709,6 @@ input:focus, textarea:focus { border-color: #05C9F9; }
   font-size: 20px;
   font-weight: bold;
   margin-top: 20px;
-}
-
-#bread-offerings .main-button {
-    margin-top: 40px;
 }
 
 /*------------------------------------*\

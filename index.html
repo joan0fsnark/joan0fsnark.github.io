@@ -375,6 +375,24 @@
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+  <script>
+    $(window).on('load', function() {
+      // Loop through each separate row of courses
+      $('#courses-wrapper .row').each(function() {
+        var maxHeight = 0;
+        // Find all the cards in the current row and get the height of the tallest one
+        $(this).find('.course').each(function() {
+          if ($(this).outerHeight() > maxHeight) {
+            maxHeight = $(this).outerHeight();
+          }
+        });
+        // Set all cards in that row to the height of the tallest one
+        $(this).find('.course').css('height', maxHeight + 'px');
+      });
+    });
+  </script>
   </body>
 
 </html>
