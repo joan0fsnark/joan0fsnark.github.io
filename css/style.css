@@ -1,8 +1,3 @@
-/*
-Template Name: HTML Education Template
-Author: yaminncco
-*/
-
 /*------------------------------------*\
     General
 \*------------------------------------*/
@@ -187,6 +182,32 @@ input:focus, textarea:focus { border-color: #05C9F9; }
   transform: translateY(-50%);
   left: 0;
   right: 0;
+}
+
+/*------------------------------------*\
+    Hero Intro Offer
+\*------------------------------------*/
+.intro-offer {
+  margin-top: 30px;
+  background-color: rgba(0,0,0,0.5);
+  padding: 20px 25px;
+  border-radius: 6px;
+  max-width: 500px;
+}
+
+.intro-offer h3 {
+  color: #f4d35e; /* warm golden accent */
+  margin-bottom: 10px;
+}
+
+.intro-offer p {
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.intro-offer em {
+  color: #ffd27f; /* softer highlight */
 }
 
 /*------------------------------------*\
@@ -412,6 +433,47 @@ input:focus, textarea:focus { border-color: #05C9F9; }
   display: inline-block; /* This makes the menu items sit side-by-side */
   margin-left: 15px;   /* This adds a little space between each item */
 }
+
+/*------------------------------------*\
+    Pixel Pricing Cards
+\*------------------------------------*/
+#index-pricing .row,
+#pricing .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#index-pricing [class*="col-"],
+#pricing [class*="col-"] {
+  display: flex;
+}
+
+#index-pricing .course,
+#pricing .course {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+#index-pricing .course-body,
+#pricing .course-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#index-pricing .course-body p,
+#pricing .course-body p {
+  color: #cdf4fe;
+  margin-bottom: 10px;
+}
+
 /*------------------------------------*\
     Adult Offerings Section
 \*------------------------------------*/
@@ -464,6 +526,8 @@ input:focus, textarea:focus { border-color: #05C9F9; }
   padding: 8px 25px;
   border-radius: 40px;
   transition: all 0.2s ease;
+  background-color: rgba(0,0,0,0.4);
+
 }
 .secondary-button:hover {
   background-color: #fff;
@@ -485,13 +549,21 @@ input:focus, textarea:focus { border-color: #05C9F9; }
   padding: 30px 20px;
 }
 
+/* Whisk Intro Offer Accent */
+#home-culinary .intro-offer h3 {
+  color: #f4d35e; /* warm golden accent */
+}
+#home-culinary .intro-offer em {
+  color: #ffd27f; /* softer highlight */
+}
+
 /* Culinary Offerings Section */
 #services {
     background-color: rgba(0,0,0,0.5);
-    margin-top: 195px; /* Adds space above the section */
-    height: 90vh;
+    margin-top: 195px;
+    min-height: 90vh;   /* let it grow if content is taller */
+    height: auto;       /* override the fixed height */
     padding: 15px 20px;
-
 }
 
 /* Header */
@@ -543,6 +615,46 @@ input:focus, textarea:focus { border-color: #05C9F9; }
 #services .feature .feature-content p {
   color: #cdf4fe;
 }
+
+/*------------------------------------*\
+    Culinary Pricing Cards
+\*------------------------------------*/
+#pricing .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+#pricing [class*="col-"] {
+  display: flex;
+}
+
+#pricing .course {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: rgba(0,0,0,0.1);
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+#pricing .course h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+#pricing .course-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* spaces text evenly */
+}
+
+#pricing .course-body p {
+  color: #cdf4fe;
+  margin-bottom: 10px;
+}
+
 
 #culinary-bio {
   background-color: transparent;
